@@ -1,0 +1,29 @@
+[core]
+    whitespace=space-before-tab,trailing-space,tabwidth=2
+    editor=vim
+    pager=most
+
+[user]
+    name = Steven Kreuzer
+    email = skreuzer@FreeBSD.org
+    signingkey = E0D6F907
+
+[push]
+    default = matching
+
+[color]
+    ui = always
+    branch = true
+    diff = true
+    pager = true
+    status = true
+
+[github]
+    user = skreuzer
+
+[rebase]
+    autosquash = true
+
+[alias]
+    lg = log --first-parent
+    co = checkout
