@@ -1,4 +1,4 @@
-RCFILES=	screenrc gitconfig cvsrc
+RCFILES=	screenrc gitconfig cvsrc perltidyrc
 
 .PHONY: $(RCFILES)
 
