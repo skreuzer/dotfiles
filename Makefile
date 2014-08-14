@@ -1,4 +1,4 @@
-RCFILES=	screenrc gitconfig
+RCFILES=	screenrc gitconfig cvsrc
 
 .PHONY: $(RCFILES)
 
