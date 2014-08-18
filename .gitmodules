@@ -1,0 +1,3 @@
+[submodule "vim/bundle/ScrollColors"]
+	path = vim/bundle/ScrollColors
+	url = git://github.com/vim-scripts/ScrollColors.git
