@@ -1,3 +1,6 @@
 [submodule "vim/bundle/ScrollColors"]
 	path = vim/bundle/ScrollColors
 	url = git://github.com/vim-scripts/ScrollColors.git
+[submodule "vim/bundle/150colors"]
+	path = vim/bundle/150colors
+	url = git://github.com/luckydev/150colors.git
