@@ -1,2 +1,3 @@
 Bundle 'gmarik/Vundle.vim'
 Bundle 'bling/vim-airline'
+Bundle 'altercation/vim-colors-solarized'
