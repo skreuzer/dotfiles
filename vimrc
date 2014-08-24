@@ -8,3 +8,6 @@ if filereadable(expand("~/.vimrc.bundles"))
 endif
 
 let mapleader = ','
+
+let g:airline_powerline_fonts = 1
+set laststatus=2

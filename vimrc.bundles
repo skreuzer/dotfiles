@@ -1,1 +1,2 @@
 Bundle 'gmarik/Vundle.vim'
+Bundle 'bling/vim-airline'
