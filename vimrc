@@ -40,6 +40,31 @@ nnoremap <leader><space> :nohlsearch<CR>
 " }}}
 " Keyboard Shortcuts {{{
 nnoremap <leader>d :NERDTreeToggle<CR>
+" ,x brings up my .vimrc
+" ,V reloads it -- making all changes active (have to save first)
+map <leader>x :sp ~/.vimrc<CR><C-W>
+map <silent><leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 " }}}
-
+" Interface {{{
+set number
+set showmatch              " Show me matching close braces
+set ruler
+set cursorline
+set colorcolumn=81	   " Make column 81 magenta
+highlight ColorColumn ctermbg=magenta
+" }}}
+" Functions {{{
+function! NeatFoldText() " {{{
+  let line = ' ' . substitute(getline(v:foldstart), '^\s*"\?\s*\|\s*"\?\s*{{' . '{\d*\s*', '', 'g') . ' '
+  let lines_count = v:foldend - v:foldstart + 1
+  let lines_count_text = '| ' . printf("%10s", lines_count . ' lines') . ' |'
+  let foldchar = matchstr(&fillchars, 'fold:\zs.')
+  let foldtextstart = strpart('+' . repeat(foldchar, v:foldlevel*2) . line, 0, (winwidth(0)*2)/3)
+  let foldtextend = lines_count_text . repeat(foldchar, 8)
+  let foldtextlength = strlen(substitute(foldtextstart . foldtextend, '.', 'x', 'g')) + &foldcolumn
+  return foldtextstart . repeat(foldchar, winwidth(0)-foldtextlength) . foldtextend
+endfunction
+set foldtext=NeatFoldText()
+" }}}
+" }}}
 " vim:foldmethod=marker:foldlevel=0
