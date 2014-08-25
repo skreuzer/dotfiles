@@ -34,5 +34,8 @@ set smartcase                     " ... unless they contain at least one capital
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 " }}}
-
+" Keyboard Shortcuts {{{
+nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <leader>g :GitGutterToggle<CR>
+" }}}
 " vim:foldmethod=marker:foldlevel=0
