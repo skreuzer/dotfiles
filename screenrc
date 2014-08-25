@@ -5,7 +5,5 @@ startup_message off
 defscrollback 5000
 hardstatus on
 hardstatus alwayslastline "%{-b gk}%-w%{+b kg}%50>%n %t%{-b gk}%+w%<"
-attrcolor b ".i"
-term "screen-256color"
-altscreen on
+term "xterm-256color"
 encoding UTF-8
