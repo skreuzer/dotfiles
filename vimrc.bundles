@@ -1,7 +1,7 @@
 Bundle 'gmarik/Vundle.vim'
 Bundle 'bling/vim-airline'
 Bundle 'skreuzer/vim-colors-solarized'
-Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'vim-scripts/nagios-syntax'
+Bundle 'mhinz/vim-signify'

@@ -10,12 +10,16 @@ endif
 syntax on
 let mapleader = ','
 
-let g:airline_powerline_fonts = 1
 set laststatus=2
 
 set background=dark
 colorscheme solarized
 
+" Plugin Configuration {{{
+let g:airline_powerline_fonts = 1
+let g:signify_vcs_list = [ 'svn', 'git' ]
+let g:signify_update_on_bufenter = 1
+" }}}
 " Arrow Keys {{{
 map  <up> <nop>
 map  <down> <nop>
@@ -36,6 +40,6 @@ nnoremap <leader><space> :nohlsearch<CR>
 " }}}
 " Keyboard Shortcuts {{{
 nnoremap <leader>d :NERDTreeToggle<CR>
-nnoremap <leader>g :GitGutterToggle<CR>
 " }}}
+
 " vim:foldmethod=marker:foldlevel=0
