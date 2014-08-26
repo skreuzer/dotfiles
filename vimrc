@@ -19,6 +19,8 @@ colorscheme solarized
 let g:airline_powerline_fonts = 1
 let g:signify_vcs_list = [ 'svn', 'git' ]
 let g:signify_update_on_bufenter = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 " }}}
 " Arrow Keys {{{
 map  <up> <nop>
