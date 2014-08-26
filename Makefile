@@ -12,3 +12,4 @@ vundle:
 
 update:
 	git pull --rebase
+	vim +PluginInstall +qall
