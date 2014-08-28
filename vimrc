@@ -89,4 +89,7 @@ set listchars+=precedes:<         " The character to show in the last column whe
                                   " off and the line continues beyond the right of the screen
 set list                          " Show invisible characters
 " }}}
+
+autocmd FileType make set noexpandtab
+
 " vim:foldmethod=marker:foldlevel=0
