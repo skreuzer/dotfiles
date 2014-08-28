@@ -69,4 +69,24 @@ endfunction
 set foldtext=NeatFoldText()
 " }}}
 " }}}
+" Whitespace {{{
+set nowrap                        " don't wrap lines
+set tabstop=4                     " a tab is four spaces
+set softtabstop=4                 " number of spaces in tab when editing
+                                  " this value is the number of spaces that is inserted when you hit <TAB>
+                                  " and also the number of spaces that are removed when you backspace.
+
+set shiftwidth=4                  " an autoindent (with <<) is four spaces
+set expandtab                     " use spaces, not tabs
+set backspace=indent,eol,start    " backspace through everything in insert mode
+" List chars
+set listchars=""                  " Reset the listchars
+set listchars=tab:\|\             " a tab should display as |
+set listchars+=trail:_            " show trailing spaces as _
+set listchars+=extends:>          " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
+set listchars+=precedes:<         " The character to show in the last column when wrap is
+                                  " off and the line continues beyond the right of the screen
+set list                          " Show invisible characters
+" }}}
 " vim:foldmethod=marker:foldlevel=0
