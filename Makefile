@@ -3,7 +3,6 @@ RCFILES=	screenrc \
 		cvsrc \
 		perltidyrc \
 		vimrc \
-		vimrc.bundles \
 		vim \
 		xterm.conf
 

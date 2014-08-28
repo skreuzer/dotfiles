@@ -2,16 +2,23 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
-
-if filereadable(expand("~/.vimrc.bundles"))
-    source ~/.vimrc.bundles
-endif
-
+" Plugins {{{
+Bundle 'gmarik/Vundle.vim'
+Bundle 'bling/vim-airline'
+Bundle 'skreuzer/vim-colors-solarized'
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
+Bundle 'skreuzer/nagios-syntax'
+Bundle 'mhinz/vim-signify'
+Bundle 'godlygeek/tabular'
+Bundle 'ntpeters/vim-better-whitespace'
+Bundle 'kien/ctrlp.vim'
+Bundle 'neilhwatson/vim_cf3'
+" }}}
 syntax on
 let mapleader = ','
 
 set laststatus=2
-
 set background=dark
 colorscheme solarized
 
