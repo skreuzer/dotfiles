@@ -1,4 +1,11 @@
-RCFILES=	screenrc gitconfig cvsrc perltidyrc vimrc vimrc.bundles vim
+RCFILES=	screenrc \
+		gitconfig \
+		cvsrc \
+		perltidyrc \
+		vimrc \
+		vimrc.bundles \
+		vim \
+		xterm.conf
 
 .PHONY: $(RCFILES)
 
