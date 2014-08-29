@@ -4,7 +4,7 @@ RCFILES=	screenrc \
 		perltidyrc \
 		vimrc \
 		vim \
-		xterm.conf
+		tmux.conf
 
 .PHONY: $(RCFILES)
 
