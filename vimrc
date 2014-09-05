@@ -101,4 +101,9 @@ set list                          " Show invisible characters
 autocmd FileType make set noexpandtab
 autocmd BufRead,BufNewFile *.cf normal zR
 
+set lazyredraw " Don't redraw screen while executing macros
+set ttyfast " Send more characters to the screen when redrawing
+set ttymouse=xterm2 " Terminal type for which mouse codes are to be recognized
+set mouse=a " Enable mouse use in all modes
+
 " vim:foldmethod=marker:foldlevel=0
