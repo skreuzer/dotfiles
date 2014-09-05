@@ -28,6 +28,7 @@ let g:signify_vcs_list = [ 'svn', 'git' ]
 let g:signify_update_on_bufenter = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+let g:EnableCFE3KeywordAbbreviations = 1
 " }}}
 " Arrow Keys {{{
 map  <up> <nop>
@@ -98,5 +99,6 @@ set list                          " Show invisible characters
 " }}}
 
 autocmd FileType make set noexpandtab
+autocmd BufRead,BufNewFile *.cf normal zR
 
 " vim:foldmethod=marker:foldlevel=0
