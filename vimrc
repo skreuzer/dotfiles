@@ -30,7 +30,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:EnableCFE3KeywordAbbreviations = 1
 " }}}
-" Arrow Keys {{{
+" Key Mappings {{{
 map  <up> <nop>
 map  <down> <nop>
 map  <left> <nop>
@@ -39,6 +39,7 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
+nnoremap Q <nop>
 " }}}
 " Searching {{{
 set hlsearch                      " highlight matches
