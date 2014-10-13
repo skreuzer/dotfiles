@@ -14,6 +14,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'kien/ctrlp.vim'
 Bundle 'neilhwatson/vim_cf3'
+Bundle 'tpope/vim-surround'
 " }}}
 syntax on
 let mapleader = ','
