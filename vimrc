@@ -62,7 +62,7 @@ set number
 set showmatch              " Show me matching close braces
 set ruler
 set cursorline
-set colorcolumn=81	   " Make column 81 magenta
+set colorcolumn=81         " Make column 81 magenta
 highlight ColorColumn ctermbg=magenta
 " }}}
 " Functions {{{
@@ -86,6 +86,7 @@ set softtabstop=4                 " number of spaces in tab when editing
                                   " this value is the number of spaces that is inserted when you hit <TAB>
                                   " and also the number of spaces that are removed when you backspace.
 
+set autoindent                    " copy the indentation from the previous line
 set shiftwidth=4                  " an autoindent (with <<) is four spaces
 set expandtab                     " use spaces, not tabs
 set backspace=indent,eol,start    " backspace through everything in insert mode
@@ -106,6 +107,6 @@ autocmd BufRead,BufNewFile *.cf normal zR
 set lazyredraw " Don't redraw screen while executing macros
 set ttyfast " Send more characters to the screen when redrawing
 set ttymouse=xterm2 " Terminal type for which mouse codes are to be recognized
-set mouse=a " Enable mouse use in all modes
+set mouse=i " Enable mouse use in insert mode
 
 " vim:foldmethod=marker:foldlevel=0
