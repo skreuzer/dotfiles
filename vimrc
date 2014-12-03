@@ -15,6 +15,7 @@ Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'kien/ctrlp.vim'
 Bundle 'neilhwatson/vim_cf3'
 Bundle 'tpope/vim-surround'
+Bundle 'miyakogi/conoline.vim'
 " }}}
 syntax on
 let mapleader = ','
@@ -30,6 +31,11 @@ let g:signify_update_on_bufenter = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:EnableCFE3KeywordAbbreviations = 1
+let g:conoline_auto_enable = 1
+let g:conoline_color_normal_dark = "guibg=#333333 guifg=#dddddd gui=None "
+                           \. "ctermbg=grey ctermfg=white"
+let g:conoline_color_insert_dark = "guibg=black guifg=white gui=bold "
+                           \. "ctermbg=black ctermfg=white"
 " }}}
 " Key Mappings {{{
 map  <up> <nop>
@@ -61,7 +67,6 @@ map <silent><leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc
 set number
 set showmatch              " Show me matching close braces
 set ruler
-set cursorline
 set colorcolumn=81         " Make column 81 magenta
 highlight ColorColumn ctermbg=magenta
 " }}}
