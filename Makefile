@@ -4,7 +4,9 @@ RCFILES=	screenrc \
 		perltidyrc \
 		vimrc \
 		vim \
-		tmux.conf
+		tmux.conf \
+		zshrc \
+		zsh
 
 .PHONY: $(RCFILES)
 
