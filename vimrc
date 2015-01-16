@@ -15,7 +15,6 @@ Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'kien/ctrlp.vim'
 Bundle 'neilhwatson/vim_cf3'
 Bundle 'tpope/vim-surround'
-Bundle 'miyakogi/conoline.vim'
 " }}}
 syntax on
 let mapleader = ','
@@ -31,11 +30,10 @@ let g:signify_update_on_bufenter = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:EnableCFE3KeywordAbbreviations = 1
-let g:conoline_auto_enable = 1
-let g:conoline_color_normal_dark = "guibg=#333333 guifg=#dddddd gui=None "
-                           \. "ctermbg=grey ctermfg=white"
-let g:conoline_color_insert_dark = "guibg=black guifg=white gui=bold "
-                           \. "ctermbg=black ctermfg=white"
+let g:ctrlp_map = '<leader>f'
+let g:ctrlp_max_height = 30
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_match_window_reversed = 0
 " }}}
 " Key Mappings {{{
 map  <up> <nop>
@@ -68,7 +66,20 @@ set number
 set showmatch              " Show me matching close braces
 set ruler
 set colorcolumn=81         " Make column 81 magenta
-highlight ColorColumn ctermbg=magenta
+highlight clear SignColumn
+highlight VertSplit    ctermbg=236
+highlight ColorColumn  ctermbg=237
+highlight LineNr       ctermbg=236 ctermfg=240
+highlight CursorLineNr ctermbg=236 ctermfg=240
+highlight CursorLine   ctermbg=236
+highlight StatusLineNC ctermbg=238 ctermfg=0
+highlight StatusLine   ctermbg=240 ctermfg=12
+highlight IncSearch    ctermbg=3   ctermfg=1
+highlight Search       ctermbg=1   ctermfg=3
+highlight Visual       ctermbg=3   ctermfg=0
+highlight Pmenu        ctermbg=240 ctermfg=12
+highlight PmenuSel     ctermbg=3   ctermfg=1
+highlight SpellBad     ctermbg=0   ctermfg=1
 " }}}
 " Functions {{{
 function! NeatFoldText() " {{{
