@@ -1,5 +1,12 @@
 autoload -U colors && colors
 
+source $HOME/.zsh/alias.zsh
+source $HOME/.zsh/functions.zsh
+for extra in private appid;
+do
+    test -f $HOME/.zsh/$extra.zsh && source $HOME/.zsh/$extra.zsh
+done
+
 export HISTFILE=~/.history
 export HISTSIZE=1000
 export SAVEHIST=1000
@@ -88,7 +95,3 @@ case `uname` in
         ;;
 esac
 
-source $HOME/.zsh/alias.zsh
-source $HOME/.zsh/functions.zsh
-source $HOME/.zsh/private.zsh
-source $HOME/.zsh/appid.zsh
