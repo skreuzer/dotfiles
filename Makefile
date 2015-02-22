@@ -6,7 +6,8 @@ RCFILES=	screenrc \
 		vim \
 		tmux.conf \
 		zshrc \
-		zsh
+		zsh \
+		login_conf
 
 .PHONY: $(RCFILES)
 
