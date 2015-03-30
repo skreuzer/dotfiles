@@ -16,6 +16,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'neilhwatson/vim_cf3'
 Bundle 'tpope/vim-surround'
 Bundle 'Keithbsmiley/tmux.vim'
+Bundle 'Absolight/vim-bind'
 " }}}
 syntax on
 let mapleader = ','
