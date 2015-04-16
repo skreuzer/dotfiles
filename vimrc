@@ -36,6 +36,15 @@ let g:ctrlp_map = '<leader>f'
 let g:ctrlp_max_height = 30
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_match_window_reversed = 0
+" NERDTree Configuration {{{
+map <silent> <C-n> :NERDTreeToggle<CR>
+" Open NERDTree on startup if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+" Close vim if the only window open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" }}}
 " }}}
 " Key Mappings {{{
 map  <up> <nop>
@@ -57,7 +66,6 @@ set smartcase                     " ... unless they contain at least one capital
 nnoremap <leader><space> :nohlsearch<CR>
 " }}}
 " Keyboard Shortcuts {{{
-nnoremap <leader>d :NERDTreeToggle<CR>
 " ,x brings up my .vimrc
 " ,V reloads it -- making all changes active (have to save first)
 map <leader>x :sp ~/.vimrc<CR><C-W>
