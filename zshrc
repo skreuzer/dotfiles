@@ -79,6 +79,7 @@ case `uname` in
         alias ls='/bin/ls -G'
         alias poudriere='sudo poudriere'
         alias arch="sysctl hw | egrep -i 'machine|model|ncpu|physmem'"
+        alias top='top -aSHz'
 
         if [ -x /usr/local/bin/colordiff ]; then
             alias diff=/usr/local/bin/colordiff
