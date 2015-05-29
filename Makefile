@@ -7,7 +7,8 @@ RCFILES=	screenrc \
 		tmux.conf \
 		zshrc \
 		zsh \
-		login_conf
+		login_conf \
+		porttools
 
 .PHONY: $(RCFILES)
 
