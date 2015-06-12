@@ -18,6 +18,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'Keithbsmiley/tmux.vim'
 Bundle 'Absolight/vim-bind'
 Bundle 'rhysd/committia.vim'
+Bundle 'kien/rainbow_parentheses.vim'
 " }}}
 syntax on
 let mapleader = ','
@@ -135,5 +136,10 @@ set lazyredraw " Don't redraw screen while executing macros
 set ttyfast " Send more characters to the screen when redrawing
 set ttymouse=xterm2 " Terminal type for which mouse codes are to be recognized
 set mouse=i " Enable mouse use in insert mode
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " vim:foldmethod=marker:foldlevel=0
