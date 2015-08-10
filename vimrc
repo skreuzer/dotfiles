@@ -19,6 +19,7 @@ Bundle 'Keithbsmiley/tmux.vim'
 Bundle 'Absolight/vim-bind'
 Bundle 'rhysd/committia.vim'
 Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'mustache/vim-mustache-handlebars'
 " }}}
 syntax on
 let mapleader = ','
