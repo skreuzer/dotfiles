@@ -39,6 +39,7 @@ let g:ctrlp_map = '<leader>f'
 let g:ctrlp_max_height = 30
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_match_window_reversed = 0
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 " NERDTree Configuration {{{
 map <silent> <C-n> :NERDTreeToggle<CR>
 " Open NERDTree on startup if no files were specified
@@ -137,6 +138,9 @@ set lazyredraw " Don't redraw screen while executing macros
 set ttyfast " Send more characters to the screen when redrawing
 set ttymouse=xterm2 " Terminal type for which mouse codes are to be recognized
 set mouse=i " Enable mouse use in insert mode
+
+" Patterns to ignore when completing file or directory names
+set wildignore+=*.zip,*.pdf,*.tar,*.gz,*.o,*.obj
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
