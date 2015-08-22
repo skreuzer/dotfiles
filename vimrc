@@ -60,6 +60,7 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 nnoremap Q <nop>
+nnoremap ; :
 " }}}
 " Searching {{{
 set hlsearch                      " highlight matches
