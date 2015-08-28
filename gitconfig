@@ -27,3 +27,6 @@
 [alias]
     lg = log --first-parent
     co = checkout
+    st = status
+    br = branch
+    ci = commit
