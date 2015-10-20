@@ -64,7 +64,7 @@ esac
 
 case `uname` in
     FreeBSD)
-        export PATH=$PATH:/usr/local/bin:/usr/local/sbin
+        export PATH=/usr/local/bin:/usr/local/sbin:$PATH
         case `uname -p` in
             amd64)
                 if [ -f "$HOME/lib/stderred.so" ]; then
@@ -89,6 +89,7 @@ case `uname` in
         ;;
 
     Darwin)
+        export PATH=/usr/local/bin:/usr/local/sbin:$PATH
         export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
         ;;
     Linux)
