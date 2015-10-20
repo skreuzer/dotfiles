@@ -32,3 +32,5 @@ function rot13     () { echo $1 | tr "[a-m][n-z][A-M][N-Z]" "[n-z][a-m][N-Z][A-M
 function base64    () { echo $1 | openssl enc -base64 }
 function pingflood () { sudo ping -i 0.05 -c 100 -q $1 }
 function wcat      () { wget -q -O - "$*" }
+
+function hex       () { jot -w %0x 256 0 | tr '[:lower:]' '[:upper:]' }
