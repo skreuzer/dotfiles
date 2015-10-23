@@ -20,13 +20,14 @@ Bundle 'Absolight/vim-bind'
 Bundle 'rhysd/committia.vim'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'sjl/badwolf'
 " }}}
 syntax on
 let mapleader = ','
 
 set laststatus=2
 set background=dark
-colorscheme solarized
+colorscheme badwolf
 
 " Plugin Configuration {{{
 let g:airline_powerline_fonts = 1
