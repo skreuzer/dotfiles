@@ -34,3 +34,35 @@ function pingflood () { sudo ping -i 0.05 -c 100 -q $1 }
 function wcat      () { wget -q -O - "$*" }
 
 function hex       () { jot -w %0x 256 0 | tr '[:lower:]' '[:upper:]' }
+
+function tz {
+    echo -n "  Chicago: "
+    TZ=America/Chicago date
+
+    echo -n " New York: "
+    TZ=America/New_York date
+
+    echo -n "   Brazil: "
+    TZ=America/Sao_Paulo date
+
+    echo -n "      UTC: "
+    TZ=Etc/UTC date
+
+    echo -n "   London: "
+    TZ=Europe/London date
+
+    echo -n "Frankfurt: "
+    TZ=Europe/Berlin date
+
+    echo -n "Stockholm: "
+    TZ=Europe/Stockholm date
+
+    echo -n "   Zurich: "
+    TZ=Europe/Zurich date
+
+    echo -n "Singapore: "
+    TZ=Asia/Singapore date
+
+    echo -n "    Tokyo: "
+    TZ=Asia/Tokyo date
+}
