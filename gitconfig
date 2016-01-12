@@ -3,10 +3,8 @@
     editor=vim
     pager=most
 
-[user]
-    name = Steven Kreuzer
-    email = skreuzer@FreeBSD.org
-    signingkey = E0D6F907
+[include]
+    path = ~/.gituser
 
 [push]
     default = matching
@@ -26,7 +24,12 @@
 
 [alias]
     lg = log --first-parent
-    co = checkout
+    co = checkout # Checkout a branch
+    cob = checkout -b # Checkout a new not yet existing branch
+    f = fetch -p
     st = status
     br = branch
     ci = commit
+    bd  = branch -d      # Delete a branch only if it has been merged
+    bD  = branch -D      # Force delete a branch
+    dc  = diff --cached  # Display the staged changes
