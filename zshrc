@@ -53,6 +53,12 @@ setopt prompt_subst
 
 PROMPT=$'%{$reset_color%}%B%{$fg[green]%}%n%b@%{$fg[cyan]%}%m%{$reset_color%}:%{$fg[cyan]%}%~%{$reset_color%}\n%{$fg[yellow]%}$ %{$reset_color%}'
 
+if [ -f /etc/debian_version ]; then
+    export DISTRO="Debian"
+    export DISTRO_VERSION=$(< /etc/debian_version)
+    export DISTRO_VERSION_MINOR=$(/usr/bin/cut -d\. -f 1 < /etc/debian_version)
+fi
+
 case $TERM in
     xterm*)
         precmd () { print -Pn "\e]0;%m:%~\a" }
@@ -96,4 +102,3 @@ case `uname` in
         export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/cfengine/bin
         ;;
 esac
-
