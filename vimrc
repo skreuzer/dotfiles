@@ -156,4 +156,9 @@ if has("gui_running")
     endif
 endif
 
+" Preserve selection after indentation in visual mode
+
+vmap > >gv
+vmap < <gv
+
 " vim:foldmethod=marker:foldlevel=0
