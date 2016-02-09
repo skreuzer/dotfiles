@@ -33,3 +33,6 @@
     bd  = branch -d      # Delete a branch only if it has been merged
     bD  = branch -D      # Force delete a branch
     dc  = diff --cached  # Display the staged changes
+
+[diff]
+algorithm = patience
