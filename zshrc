@@ -56,8 +56,17 @@ PROMPT=$'%{$reset_color%}%B%{$fg[green]%}%n%b@%{$fg[cyan]%}%m%{$reset_color%}:%{
 if [ -f /etc/debian_version ]; then
     export DISTRO="Debian"
     export DISTRO_VERSION=$(< /etc/debian_version)
-    export DISTRO_VERSION_MINOR=$(/usr/bin/cut -d\. -f 1 < /etc/debian_version)
+    export DISTRO_VERSION_MAJOR=$(/usr/bin/cut -d\. -f 1 < /etc/debian_version)
 fi
+
+case $DISTRO in
+    Debian)
+        case $DISTRO_VERSION_MAJOR in
+            7)
+                alias fmake=freebsd-make
+                ;;
+        esac
+esac
 
 case $TERM in
     xterm*)
