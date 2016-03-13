@@ -3,8 +3,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 " Plugins {{{
-Bundle 'gmarik/Vundle.vim'
-Bundle 'bling/vim-airline'
+Bundle 'VundleVim/Vundle.vim'
+Bundle 'vim-airline/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 Bundle 'skreuzer/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
@@ -12,7 +13,7 @@ Bundle 'skreuzer/nagios-syntax'
 Bundle 'mhinz/vim-signify'
 Bundle 'godlygeek/tabular'
 Bundle 'ntpeters/vim-better-whitespace'
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 Bundle 'neilhwatson/vim_cf3'
 Bundle 'tpope/vim-surround'
 Bundle 'Keithbsmiley/tmux.vim'
@@ -21,9 +22,12 @@ Bundle 'rhysd/committia.vim'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'sjl/badwolf'
+Bundle 'Yggdroot/indentLine'
 " }}}
 syntax on
 let mapleader = ','
+
+set encoding=utf8
 
 set laststatus=2
 set background=dark
@@ -31,11 +35,20 @@ colorscheme badwolf
 
 " Plugin Configuration {{{
 let g:airline_powerline_fonts = 1
-let g:signify_vcs_list = [ 'svn', 'git' ]
-let g:signify_update_on_bufenter = 1
+let g:airline_left_sep=' '
+let g:airline_right_sep=' '
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#right_sep = ' '
+let g:airline#extensions#tabline#right_alt_sep = '|'
+
+let g:signify_vcs_list = [ 'svn', 'git' ]
+let g:signify_update_on_bufenter = 1
+
 let g:EnableCFE3KeywordAbbreviations = 1
+
 let g:ctrlp_map = '<leader>f'
 let g:ctrlp_max_height = 30
 let g:ctrlp_working_path_mode = 0
@@ -118,7 +131,8 @@ set softtabstop=4                 " number of spaces in tab when editing
                                   " this value is the number of spaces that is inserted when you hit <TAB>
                                   " and also the number of spaces that are removed when you backspace.
 
-set autoindent                    " copy the indentation from the previous line
+set autoindent
+set copyindent                    " copy the indentation from the previous line
 set shiftwidth=4                  " an autoindent (with <<) is four spaces
 set expandtab                     " use spaces, not tabs
 set backspace=indent,eol,start    " backspace through everything in insert mode
@@ -174,12 +188,13 @@ au Syntax * RainbowParenthesesLoadBraces
 if has("gui_running")
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
-        set guifont=Inconsolata\ for\ Powerline:h15
+        " set guifont=Inconsolata\ for\ Powerline:h15
+        Bundle 'ryanoasis/vim-devicons'
+        set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete:h14
     endif
 endif
 
 " Preserve selection after indentation in visual mode
-
 vmap > >gv
 vmap < <gv
 
