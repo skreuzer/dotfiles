@@ -154,8 +154,17 @@ set ttyfast " Send more characters to the screen when redrawing
 set ttymouse=xterm2 " Terminal type for which mouse codes are to be recognized
 set mouse=i " Enable mouse use in insert mode
 
+set wildmenu
+set wildmode=list:longest,full
 " Patterns to ignore when completing file or directory names
-set wildignore+=*.zip,*.pdf,*.tar,*.gz,*.o,*.obj
+set wildignore+=.hg,.git,.svn " Version control
+set wildignore+=*.aux,*.out,*.toc " LaTeX intermediate files
+set wildignore+=*.zip,*.pdf,*.tar,*.gz " binary images
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg " images
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
+set wildignore+=*.spl " compiled spelling word lists
+set wildignore+=*.sw? " Vim swap files
+set wildignore+=*.DS_Store " Directory attributes on OS X
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
