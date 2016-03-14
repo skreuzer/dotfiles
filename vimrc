@@ -146,19 +146,6 @@ set listchars+=precedes:<         " The character to show in the last column whe
                                   " off and the line continues beyond the right of the screen
 set list                          " Show invisible characters
 " }}}
-" Relative Line Numbers {{{
-set relativenumber
-function! NumberToggle() " {{{
- if(&relativenumber == 1)
-    set norelativenumber
-  else
-    set relativenumber
-  endif
-endfunc
-" }}}
-" Toggle relative line numbers with Ctrl-n
-nnoremap <C-n> :call NumberToggle()<cr>
-" }}}
 
 autocmd FileType make set noexpandtab
 autocmd BufRead,BufNewFile *.cf normal zR
@@ -188,7 +175,6 @@ au Syntax * RainbowParenthesesLoadBraces
 if has("gui_running")
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
-        " set guifont=Inconsolata\ for\ Powerline:h15
         Bundle 'ryanoasis/vim-devicons'
         set guifont=Droid\ Sans\ Mono\ for\ Powerline\ Nerd\ Font\ Complete:h14
     endif
