@@ -1,4 +1,4 @@
-RCFILES=	screenrc \
+SYMLINK_RCFILES=	screenrc \
 		gitconfig \
 		cvsrc \
 		perltidyrc \
@@ -7,15 +7,19 @@ RCFILES=	screenrc \
 		tmux.conf \
 		zshrc \
 		zsh \
-		login_conf \
 		porttools
 
-.PHONY: $(RCFILES)
+CP_RCFILES=	login_conf
 
-install: $(RCFILES)
+.PHONY: $(SYMLINK_RCFILES) $(CP_RCFILES)
 
-$(RCFILES):
+install: $(SYMLINK_RCFILES) $(CP_RCFILES)
+
+$(SYMLINK_RCFILES):
 	/bin/ln -nfs $(CURDIR)/$@ $$HOME/.$@
+
+$(CP_RCFILES):
+	/bin/cp $(CURDIR)/$@ $$HOME/.$@
 
 vundle:
 	git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
