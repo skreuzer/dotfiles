@@ -69,6 +69,7 @@ map  <up> <nop>
 map  <down> <nop>
 map  <left> <nop>
 map  <right> <nop>
+cmap w!! w !sudo tee > /dev/null %
 imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
