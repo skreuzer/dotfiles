@@ -105,7 +105,6 @@ case `uname` in
 
     Darwin)
         export PATH=/usr/local/bin:/usr/local/sbin:$PATH
-        export PYTHONPATH=`brew --prefix`/lib/python2.7/site-packages:$PYTHONPATH
         ;;
     Linux)
         export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/cfengine/bin
