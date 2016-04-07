@@ -54,6 +54,11 @@ let g:ctrlp_max_height = 30
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+
+let g:indentLine_char = '┆'
+let g:indentLine_color_term=239
+nmap <leader>i :IndentLinesToggle<CR>
+
 " NERDTree Configuration {{{
 map <silent> <C-n> :NERDTreeToggle<CR>
 " Open NERDTree on startup if no files were specified
