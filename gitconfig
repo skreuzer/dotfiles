@@ -34,6 +34,7 @@
     bD  = branch -D      # Force delete a branch
     dc  = diff --cached  # Display the staged changes
     pr = pull --rebase
+    p = pull --rebase --ff-only
 
 [diff]
 algorithm = patience
