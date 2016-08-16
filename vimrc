@@ -23,6 +23,7 @@ Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'sjl/badwolf'
 Bundle 'Yggdroot/indentLine'
+Bundle 'toyamarinyon/vim-swift'
 " }}}
 syntax on
 let mapleader = ','
