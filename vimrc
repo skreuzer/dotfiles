@@ -115,6 +115,12 @@ imap <left> <nop>
 imap <right> <nop>
 nnoremap Q <nop>
 nnoremap ; :
+" Resize Splits {{{
+map <leader>> <C-w>10>
+map <leader>< <C-w>10<
+map <leader>= <C-w>5+
+map <leader>- <C-w>5-
+" }}}
 " }}}
 " Searching {{{
 set hlsearch                      " highlight matches
