@@ -25,7 +25,7 @@
 [alias]
     lg = log --first-parent
     co = checkout # Checkout a branch
-    cob = checkout -b # Checkout a new not yet existing branch
+    cob = checkout --track origin/master -b # Checkout a new not yet existing branch
     f = fetch -p
     st = status
     br = branch
