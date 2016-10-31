@@ -194,6 +194,8 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
+au BufNewFile,BufRead *.sgml,*.ent,*.xsl,*.xml call Set_SGML()
+
 if has("gui_running")
     let s:uname = system("uname")
     if s:uname == "Darwin\n"
@@ -205,5 +207,26 @@ endif
 " Preserve selection after indentation in visual mode
 vmap > >gv
 vmap < <gv
+
+function Set_SGML()
+	call ShowSpecial()
+	setlocal nonumber
+	setlocal noexpandtab
+	syn match sgmlSpecial "&[^;]*;"
+	setlocal syntax=sgml
+	setlocal ft=sgml
+	setlocal shiftwidth=2
+	setlocal textwidth=72
+	setlocal tabstop=8
+	highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+	match OverLength /\%71v.\+/
+	return 0
+endfunction " Set_SGML()
+
+function ShowSpecial()
+    setlocal list listchars=tab:>>,trail:*,eol:$
+    hi nontext ctermfg=red
+    return 0
+endfunction " ShowSpecial()
 
 " vim:foldmethod=marker:foldlevel=0
