@@ -78,3 +78,10 @@ function man {
         LESS_TERMCAP_us=$(printf "\e[1;32m") \
             man "$@"
 }
+
+function cflastrun {
+    awk -F '[:,]' -v time=$(date +%s) \
+        'END {printf "%d minutes ago (took %d seconds)\n", (time - $1) / 60, $2 - $1}' \
+        /var/cfengine/promise_summary.log
+}
+
