@@ -38,3 +38,5 @@
 
 [diff]
 algorithm = patience
+[pull]
+	rebase = true
