@@ -16,10 +16,10 @@ CP_RCFILES=	login_conf
 install: $(SYMLINK_RCFILES) $(CP_RCFILES)
 
 $(SYMLINK_RCFILES):
-	/bin/ln -nfs $(CURDIR)/$@ $$HOME/.$@
+	/bin/ln -nfs $(PWD)/$@ $$HOME/.$@
 
 $(CP_RCFILES):
-	/bin/cp $(CURDIR)/$@ $$HOME/.$@
+	/bin/cp $(PWD)/$@ $$HOME/.$@
 
 vundle:
 	git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
