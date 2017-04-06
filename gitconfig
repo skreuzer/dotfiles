@@ -16,6 +16,11 @@
     pager = true
     status = true
 
+[color "status"]
+    added = green
+    changed = yellow bold
+    untracked = red bold
+
 [github]
     user = skreuzer
 
@@ -37,6 +42,7 @@
     p = pull --rebase --ff-only
 
 [diff]
-algorithm = patience
+    algorithm = patience
+
 [pull]
 	rebase = true
