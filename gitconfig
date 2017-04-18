@@ -45,4 +45,4 @@
     algorithm = patience
 
 [pull]
-	rebase = true
+    rebase = true
