@@ -7,7 +7,8 @@ SYMLINK_RCFILES=	screenrc \
 		tmux.conf \
 		zshrc \
 		zsh \
-		porttools
+		porttools \
+		utoprc
 
 CP_RCFILES=	login_conf
 
