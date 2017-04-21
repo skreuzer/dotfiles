@@ -47,8 +47,6 @@ setopt NUMERIC_GLOB_SORT
 setopt PRINT_EXIT_VALUE
 export LANG=en_US.UTF-8
 
-export PATH=$PATH:$HOME/bin
-
 setopt prompt_subst
 
 PROMPT=$'%{$reset_color%}%B%{$fg[green]%}%n%b@%{$fg[cyan]%}%m%{$reset_color%}:%{$fg[cyan]%}%~%{$reset_color%}\n%{$fg[yellow]%}$ %{$reset_color%}'
@@ -110,3 +108,5 @@ case `uname` in
         export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/var/cfengine/bin
         ;;
 esac
+
+export PATH=$(echo -n $HOME/bin:$PATH | awk -v RS=: -v ORS=: '!arr[$0]++')
