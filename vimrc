@@ -135,14 +135,14 @@ highlight SpellBad     ctermbg=0   ctermfg=1
 " }}}
 " Functions {{{
 function! NeatFoldText() " {{{
-  let line = ' ' . substitute(getline(v:foldstart), '^\s*"\?\s*\|\s*"\?\s*{{' . '{\d*\s*', '', 'g') . ' '
-  let lines_count = v:foldend - v:foldstart + 1
-  let lines_count_text = '| ' . printf("%10s", lines_count . ' lines') . ' |'
-  let foldchar = matchstr(&fillchars, 'fold:\zs.')
-  let foldtextstart = strpart('+' . repeat(foldchar, v:foldlevel*2) . line, 0, (winwidth(0)*2)/3)
-  let foldtextend = lines_count_text . repeat(foldchar, 8)
-  let foldtextlength = strlen(substitute(foldtextstart . foldtextend, '.', 'x', 'g')) + &foldcolumn
-  return foldtextstart . repeat(foldchar, winwidth(0)-foldtextlength) . foldtextend
+    let line = ' ' . substitute(getline(v:foldstart), '^\s*"\?\s*\|\s*"\?\s*{{' . '{\d*\s*', '', 'g') . ' '
+    let lines_count = v:foldend - v:foldstart + 1
+    let lines_count_text = '| ' . printf("%10s", lines_count . ' lines') . ' |'
+    let foldchar = matchstr(&fillchars, 'fold:\zs.')
+    let foldtextstart = strpart('+' . repeat(foldchar, v:foldlevel*2) . line, 0, (winwidth(0)*2)/3)
+    let foldtextend = lines_count_text . repeat(foldchar, 8)
+    let foldtextlength = strlen(substitute(foldtextstart . foldtextend, '.', 'x', 'g')) + &foldcolumn
+    return foldtextstart . repeat(foldchar, winwidth(0)-foldtextlength) . foldtextend
 endfunction
 set foldtext=NeatFoldText()
 " }}}
@@ -210,18 +210,18 @@ vmap > >gv
 vmap < <gv
 
 function Set_SGML()
-	call ShowSpecial()
-	setlocal nonumber
-	setlocal noexpandtab
-	syn match sgmlSpecial "&[^;]*;"
-	setlocal syntax=sgml
-	setlocal ft=sgml
-	setlocal shiftwidth=2
-	setlocal textwidth=72
-	setlocal tabstop=8
-	highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-	match OverLength /\%71v.\+/
-	return 0
+    call ShowSpecial()
+    setlocal nonumber
+    setlocal noexpandtab
+    syn match sgmlSpecial "&[^;]*;"
+    setlocal syntax=sgml
+    setlocal ft=sgml
+    setlocal shiftwidth=2
+    setlocal textwidth=72
+    setlocal tabstop=8
+    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    match OverLength /\%71v.\+/
+    return 0
 endfunction " Set_SGML()
 
 function ShowSpecial()
