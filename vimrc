@@ -51,7 +51,7 @@ let g:signify_update_on_bufenter = 1
 
 let g:EnableCFE3KeywordAbbreviations = 1
 
-let g:ctrlp_map = '<leader>f'
+let g:ctrlp_map = '<c-p>'
 let g:ctrlp_max_height = 30
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_match_window_reversed = 0
