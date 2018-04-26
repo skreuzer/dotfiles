@@ -25,6 +25,7 @@ Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'sjl/badwolf'
 Bundle 'Yggdroot/indentLine'
 Bundle 'toyamarinyon/vim-swift'
+Bundle 'Valloric/YouCompleteMe'
 " }}}
 syntax on
 let mapleader = ','
