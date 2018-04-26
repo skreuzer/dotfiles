@@ -1,5 +1,6 @@
 SYMLINK_RCFILES=	screenrc \
 		gitconfig \
+		gituser \
 		cvsrc \
 		perltidyrc \
 		vimrc \
