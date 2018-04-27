@@ -6,7 +6,6 @@ call vundle#rc()
 Bundle 'VundleVim/Vundle.vim'
 Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
-Bundle 'skreuzer/vim-colors-solarized'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'skreuzer/nagios-syntax'
@@ -166,7 +165,7 @@ function! NeatFoldText() " {{{
 endfunction
 set foldtext=NeatFoldText()
 " }}}
-function Set_SGML() " {{{
+function! Set_SGML() " {{{
     call ShowSpecial()
     setlocal nonumber
     setlocal noexpandtab
@@ -181,7 +180,7 @@ function Set_SGML() " {{{
     return 0
 endfunction
 " }}}
-function ShowSpecial() " {{{
+function! ShowSpecial() " {{{
     setlocal list listchars=tab:>>,trail:*,eol:$
     hi nontext ctermfg=red
     return 0
