@@ -38,6 +38,7 @@ set background=dark
 colorscheme badwolf
 
 " Plugin Configuration {{{
+" Airline {{{
 let g:airline_powerline_fonts = 1
 let g:airline_left_sep=' '
 let g:airline_right_sep=' '
@@ -47,21 +48,36 @@ let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#right_sep = ' '
 let g:airline#extensions#tabline#right_alt_sep = '|'
-
+" }}}
+" Signify {{{
 let g:signify_vcs_list = [ 'svn', 'git' ]
 let g:signify_update_on_bufenter = 1
-
+" }}}
+" CFEngine {{{
+" Enable keyword abbreviations
 let g:EnableCFE3KeywordAbbreviations = 1
-
+autocmd BufRead,BufNewFile *.cf normal zR
+" }}}
+" CtrlP {{{
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_max_height = 30
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-
+" }}}
+" Indent Line {{{
 let g:indentLine_char = '┆'
 let g:indentLine_color_term=239
-
+nmap <leader>i :IndentLinesToggle<CR>
+" }}}
+" Rainbow Parentheses {{{
+" Always On:
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+" }}}
+" Committia {{{
 let g:committia_hooks = {}
 function! g:committia_hooks.edit_open(info)
     setlocal spell
@@ -75,9 +91,7 @@ function! g:committia_hooks.edit_open(info)
     imap <buffer><C-n> <Plug>(committia-scroll-diff-down-half)
     imap <buffer><C-p> <Plug>(committia-scroll-diff-up-half)
 endfunction
-
-nmap <leader>i :IndentLinesToggle<CR>
-
+" }}}
 " NERDTree Configuration {{{
 map <silent> <C-n> :NERDTreeToggle<CR>
 " Open NERDTree on startup if no files were specified
@@ -114,6 +128,9 @@ nnoremap <leader><space> :nohlsearch<CR>
 " ,V reloads it -- making all changes active (have to save first)
 map <leader>x :sp ~/.vimrc<CR><C-W>
 map <silent><leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+" Preserve selection after indentation in visual mode
+vmap > >gv
+vmap < <gv
 " }}}
 " Interface {{{
 set number
@@ -192,15 +209,7 @@ set listchars+=precedes:<         " The character to show in the last column whe
                                   " off and the line continues beyond the right of the screen
 set list                          " Show invisible characters
 " }}}
-
-autocmd FileType make set noexpandtab
-autocmd BufRead,BufNewFile *.cf normal zR
-
-set lazyredraw " Don't redraw screen while executing macros
-set ttyfast " Send more characters to the screen when redrawing
-set ttymouse=xterm2 " Terminal type for which mouse codes are to be recognized
-set mouse=i " Enable mouse use in insert mode
-
+" Wild Mode {{{
 set wildmenu
 set wildmode=list:longest,full
 " Patterns to ignore when completing file or directory names
@@ -212,11 +221,15 @@ set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
 set wildignore+=*.spl " compiled spelling word lists
 set wildignore+=*.sw? " Vim swap files
 set wildignore+=*.DS_Store " Directory attributes on OS X
+" }}}
 
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
+autocmd FileType make set noexpandtab
+
+set lazyredraw " Don't redraw screen while executing macros
+set ttyfast " Send more characters to the screen when redrawing
+set ttymouse=xterm2 " Terminal type for which mouse codes are to be recognized
+set mouse=i " Enable mouse use in insert mode
+
 
 au BufNewFile,BufRead *.sgml,*.ent,*.xsl,*.xml call Set_SGML()
 
@@ -228,8 +241,5 @@ if has("gui_running")
     endif
 endif
 
-" Preserve selection after indentation in visual mode
-vmap > >gv
-vmap < <gv
 
 " vim:foldmethod=marker:foldlevel=0
