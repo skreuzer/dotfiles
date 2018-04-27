@@ -26,6 +26,7 @@ Bundle 'sjl/badwolf'
 Bundle 'Yggdroot/indentLine'
 Bundle 'toyamarinyon/vim-swift'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'djoshea/vim-autoread'
 " }}}
 syntax on
 let mapleader = ','
