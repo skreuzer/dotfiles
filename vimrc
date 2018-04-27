@@ -27,6 +27,7 @@ Bundle 'toyamarinyon/vim-swift'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'djoshea/vim-autoread'
 Bundle 'w0rp/ale'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
 " }}}
 syntax on
 let mapleader = ','
