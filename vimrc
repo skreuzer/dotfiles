@@ -8,13 +8,11 @@ Bundle 'vim-airline/vim-airline'
 Bundle 'vim-airline/vim-airline-themes'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-Bundle 'skreuzer/nagios-syntax'
 Bundle 'skreuzer/vim-prometheus'
 Bundle 'mhinz/vim-signify'
 Bundle 'godlygeek/tabular'
 Bundle 'ntpeters/vim-better-whitespace'
 Bundle 'ctrlpvim/ctrlp.vim'
-Bundle 'neilhwatson/vim_cf3'
 Bundle 'tpope/vim-surround'
 Bundle 'Keithbsmiley/tmux.vim'
 Bundle 'Absolight/vim-bind'
@@ -53,11 +51,6 @@ let g:airline#extensions#tabline#right_alt_sep = '|'
 " Signify {{{
 let g:signify_vcs_list = [ 'svn', 'git' ]
 let g:signify_update_on_bufenter = 1
-" }}}
-" CFEngine {{{
-" Enable keyword abbreviations
-let g:EnableCFE3KeywordAbbreviations = 1
-autocmd BufRead,BufNewFile *.cf normal zR
 " }}}
 " CtrlP {{{
 let g:ctrlp_map = '<c-p>'
