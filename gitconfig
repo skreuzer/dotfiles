@@ -1,10 +1,13 @@
 [core]
-    whitespace=space-before-tab,trailing-space,tabwidth=2
-    editor=vim
-    pager=most
+    whitespace = space-before-tab,trailing-space,tabwidth=2
+    editor = vim
+    pager = delta
 
 [include]
     path = ~/.gituser
+
+[interactive]
+    diffFilter = delta --color-only
 
 [push]
     default = matching
@@ -49,3 +52,13 @@
 
 [commit]
     gpgsign = true
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    light = false    # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
