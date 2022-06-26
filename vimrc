@@ -21,7 +21,7 @@ Bundle 'Absolight/vim-bind'
 Bundle 'rhysd/committia.vim'
 Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'arcticicestudio/nord-vim'
+Bundle 'morhetz/gruvbox'
 Bundle 'Yggdroot/indentLine'
 Bundle 'toyamarinyon/vim-swift'
 Bundle 'Valloric/YouCompleteMe'
@@ -36,7 +36,7 @@ set encoding=utf8
 
 set laststatus=2
 set background=dark
-colorscheme nord
+colorscheme gruvbox
 
 " Plugin Configuration {{{
 " Airline {{{
